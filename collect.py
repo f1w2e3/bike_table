@@ -15,10 +15,7 @@ if not firebase_admin._apps:
     cred_dict = json.loads(firebase_json)
     cred = credentials.Certificate(cred_dict)
     firebase_admin.initialize_app(cred, {
-        # 본인의 Realtime Database 주소 형식을 맞춰줍니다.
-        # 보통 'https://프로젝트ID-default-rtdb.firebaseio.com/' 입니다.
-        # 정확한 주소는 파이어베이스 콘솔 Realtime Database 탭 상단에 보입니다.
-        'databaseURL': f"https://{cred_dict['project_id']}-default-rtdb.firebaseio.com/"
+        'databaseURL': f"https://tashu-archive-default-rtdb.firebaseio.com/"
     })
 
 def run():
